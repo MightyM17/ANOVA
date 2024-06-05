@@ -6,7 +6,7 @@ def preprocecss(data):
     return data
 
 # CBD
-def anova_steps(data, a):
+def anova_steps(data, a, type):
     data = preprocecss(data)
     
     # Find mean of each group
