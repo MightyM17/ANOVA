@@ -1,5 +1,5 @@
 import streamlit as st
-from anova_steps import anova_steps
+from anova_steps import anova_steps_cbd, anova_steps_rbd
 import pandas as pd
 import re
 
@@ -37,7 +37,7 @@ if question:
         st.write("Using CRD")
     
     # Regex search for alpha value
-    alpha_search = re.search(r'α|alpha = (\d*\.?\d+)', question)
+    alpha_search = re.search(r'α = (\d*\.?\d+)', question)
     if alpha_search:
         a = float(alpha_search.group(1))
         st.write("α = ", a)
@@ -45,7 +45,7 @@ if question:
         a = 0.01
         st.write("α = 0.01 by default")
 
-if uploaded_file is not None and question is not None:
+if uploaded_file is not None and question:
     # Read CSV
     if uploaded_file.name.endswith('.csv'):
         data = pd.read_csv(uploaded_file)
@@ -67,21 +67,46 @@ if uploaded_file is not None and question is not None:
 
     st.write("Data: ", data)
     
-    mean, total_mean, SSC, df_c, SSE, df_e, SST, df_t, MSC, MSE, F, F_critical = anova_steps(data, a, type)
+    if type == 'crd':
+        mean, total_mean, SSC, df_c, SSE, df_e, SST, df_t, MSC, MSE, F, F_critical = anova_steps_cbd(data, a)
+    if type == 'rbd':    
+        mean, total_mean, SSC, df_c, SSR, df_r, SSE, df_e, SST, df_t, MSC, MSR, MSE, F_treat, F_block, F_critical_treat, F_critical_block = anova_steps_rbd(data, a)
     st.write("Mean: ", mean)
     st.write("Total Mean: ", total_mean)
-    table_data = {
-        "SS": [SSC, SSE, SST],
-        "df": [df_c, df_e, df_t],
-        "MS": [MSC, MSE, ''],
-        "F": [F, '', '']
-    }
-    table_index = ["Between Groups", "Within Groups", "Total"]
+    
+    if type == 'crd':
+        table_data = {
+            "SS": [SSC, SSE, SST],
+            "df": [df_c, df_e, df_t],
+            "MS": [MSC, MSE, ''],
+            "F": [F, '', '']
+        }
+        table_index = ["Between Groups", "Within Groups", "Total"]
+    if type == 'rbd':
+        table_data = {
+            "SS": [SSC, SSR, SSE, SST],
+            "df": [df_c, df_r, df_e, df_t],
+            "MS": [MSC, MSR, MSE, ''],
+            "F": [F_treat, F_block, '', '']
+        }
+        table_index = ["Treatments", "Blocks", "Error", "Total"]
+    
     table_df = pd.DataFrame(table_data, index=table_index)
     st.table(table_df)
-    st.write("F Critical: ", F_critical, " (alpha = 0.01)")
-    
-    if F > F_critical:
-        st.write("Reject Null Hypothesis")
-    else:
-        st.write("Accept Null Hypothesis")
+    if type == 'cbd':
+        st.write("F Critical: ", F_critical, " alpha = ", a)
+        if F > F_critical:
+            st.write("Reject Null Hypothesis")
+        else:
+            st.write("Accept Null Hypothesis")
+    if type == 'rbd':
+        st.write("F Critical (Treatments): ", F_critical_treat, " alpha = ", a)
+        st.write("F Critical (Blocks): ", F_critical_block, " alpha = ", a)
+        if F_treat > F_critical_treat:
+            st.write("Reject Null Hypothesis for Treatments")
+        else:
+            st.write("Accept Null Hypothesis for Treatments")
+        if F_block > F_critical_block:
+            st.write("Reject Null Hypothesis for Blocks")
+        else:
+            st.write("Accept Null Hypothesis for Blocks")
