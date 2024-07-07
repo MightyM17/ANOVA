@@ -265,7 +265,7 @@ conclusions.",,,Treatment 2,,,,,,0.05,Two Way FD
 ,,Treatment 1,B,"1.9, 1.6, 1.7, 2.0","2.7, 2.5, 2.8, 2.8"," 1.9, 2.2, 1.9, 2.0"," 2.8, 2.6, 2.4, 2.8",,,,
 ,,,,,,,,,,,
 28,"Children are generally believed to have considerable influence over their parents in the purchase of certain items, particularly food and beverage items. To study this notion further, a study is conducted in which parents are asked to report how many food and beverage items purchased by the family per week are purchased mainly because of the influence of their children. Because the age of the child may have an effect on the study, parents are asked to focus on one particular child in the family for the week, and to report the age of the child. Four age categories are selected for the children: 4–5 years, 6–7 years, 8–9 years, and 10–12 years. Also, because the number of children in the family might make a difference, three different sizes of families are chosen for the study: families with one child, families with two children, and families with three or
-more children. Suppose the following data represent the reported number of child-influenced buying incidents per week. Use the data to compute a two-way ANOVA. Let alpha = 0.05",,,Number of Children in Family,,,,,,0.05,Two Way FD
+more children. Suppose the following data represent the reported number of child-influenced buying incidents per week. Use the data to compute a two-way ANOVA. Let alpha = 0.05",,,,,,,,,0.05,Two Way FD
 ,,,,1,2,3 or more,,,,,
 ,,Age of Child (years),04-May,2,1,1,,,,,
 ,,Age of Child (years),04-May,4,2,1,,,,,
@@ -276,7 +276,7 @@ more children. Suppose the following data represent the reported number of child
 ,,Age of Child (years),10-Dec,7,3,4,,,,,
 ,,Age of Child (years),10-Dec,8,5,3,,,,,
 ,,,,,,,,,,,
-29,"A shoe retailer conducted a study to determine whether there is a difference in the number of pairs of shoes sold per day by stores according to the number of competitors within a 1-mile radius and the location of the store. The company researchers selected three types of stores for consideration in the study: stand-alone suburban stores, mall stores, and downtown stores. These stores vary in the numbers of competing stores within a 1-mile radius, which have been reduced to four categories: 0 competitors, 1 competitor, 2 competitors, and 3 or more competitors. Suppose the following data represent the number of pairs of shoes sold per day for each of these types of stores with the given number of competitors. Use alpha = 0.05 two-way ANOVA to analyze the data.",,,Number of Competitors,,,,,,0.05,Two Way FD
+29,"A shoe retailer conducted a study to determine whether there is a difference in the number of pairs of shoes sold per day by stores according to the number of competitors within a 1-mile radius and the location of the store. The company researchers selected three types of stores for consideration in the study: stand-alone suburban stores, mall stores, and downtown stores. These stores vary in the numbers of competing stores within a 1-mile radius, which have been reduced to four categories: 0 competitors, 1 competitor, 2 competitors, and 3 or more competitors. Suppose the following data represent the number of pairs of shoes sold per day for each of these types of stores with the given number of competitors. Use alpha = 0.05 two-way ANOVA to analyze the data.",,,,,,,,,0.05,Two Way FD
 ,,,,0,1,2,3 or more,,,,
 ,,Store Location,Stand-Alone,41,38,59,47,,,,
 ,,Store Location,Stand-Alone,30,31,48,40,,,,
@@ -296,7 +296,7 @@ given here, organized by machine and shift. In addition, Excel has been used to
 analyze the data with a two-way ANOVA. What are the hypotheses for this
 problem? Study the output in terms of significant differences. Discuss the
 results obtained. What conclusions might the quality controllers reach 
-from this analysis?",,,Valve Openings (cm),,,,,,0.05,Two Way FD
+from this analysis?",,,,,,,,,0.05,Two Way FD
 ,,,,Shift 1,Shift 2,Shift 3,,,,,
 ,,Machine,1,6.56,6.38,6.29,,,,,
 ,,Machine,1,6.4,6.19,6.23,,,,,
