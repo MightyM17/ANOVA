@@ -66,6 +66,9 @@ if uploaded_file is not None and question:
             st.stop()
 
     st.write("Data: ", data)
+    if(data.columns.size < 3):
+        st.write("Not enough columns to perform ANOVA, use other methods which are easier than anova - Shivani Devi 2024")
+        st.stop()
     
     if type == 'crd':
         mean, total_mean, SSC, df_c, SSE, df_e, SST, df_t, MSC, MSE, F, F_critical = anova_steps_cbd(data, a)
