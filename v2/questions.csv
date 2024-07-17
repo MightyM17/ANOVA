@@ -315,8 +315,6 @@ from this analysis?",,,Valve Openings (cm),,,,,,Insufficient Data,FD
 ,,11,14,10,,,,,,,
 ,,10,18,9,,,,,,,
 ,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
 32," Analyze the following data, gathered from a randomized block design using If there is a significant
 difference in the treatment effects, do multiple comparisons.",,,Treatment,,,,,,Insufficient Data,RBD
 ,,,,A,B,C,D,,,,
@@ -384,8 +382,6 @@ a significant difference, use the Anova procedure to determine which pairs, if a
 ,,24.33,22.86,19.5,,,,,,,
 ,,19.81,25.55,27,,,,,,,
 ,,22.29,18.5,22.95,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
 ,,,,,,,,,,,
 38,"Why are mergers attractive to CEOs? One of the reasons might be a potential increase in market share that can come with the pooling of company markets. Suppose a random survey of CEOs is taken, and they
 are asked to respond on a scale from 1 to 5 (5 representing strongly agree) whether increase in market share is a good reason for considering a merger of their company with another. Suppose also that the data are as given here and that CEOs have been categorized by size of company and years they have been with their company. Use a two-way ANOVA to determine whether there are any significant differences in the responses to this question. Let alpha = 0.05",,,Company Size ($ million per year in sales),,,,,,0.05,FD
