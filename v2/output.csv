@@ -1,7 +1,1330 @@
-,Treatment level,,,,
-Block,1,1,2,3,4
-Block,2,23,26,24,24
-Block,3,31,35,32,33
-Block,4,27,29,26,27
-Block,5,21,28,27,22
-,,18,25,27,20
+Questions,Alpha,Type,Data,isFirstColumnMergedHeader,isSecondColumnGroupedHeader,isFirstColumnHeader,isFirstColumnGroupedHeader,isFirstRowHeader,Extracted Data
+"A researcher is studying the effect of different fertilizers on the height of plants. The following data represents the heights (in cm) of plants grown with three different fertilizers:    
+Perform a one-way ANOVA to determine if there is a significant difference in plant heights using a significance level of 0.05.",0.05,CRD,"0 Fertilizer A Fertilizer B Fertilizer C
+0           45           50           55
+1           48           52           53
+2           46           51           56
+3           47           49           54
+4           44           53           57",False,False,False,False,False,"[[45.0 50.0 55.0]
+ [48.0 52.0 53.0]
+ [46.0 51.0 56.0]
+ [47.0 49.0 54.0]
+ [44.0 53.0 57.0]]"
+"A company wants to compare customer satisfaction scores for three different product models. The scores (out of 10) are: 
+Conduct a one-way ANOVA to see if there are significant differences in customer satisfaction scores at α = 0.01.",0.01,CRD,"7 Model X Model Y Model Z
+0       7       8       6
+1       6       7       7
+2       8       9       6
+3       7       8       5
+4       9       7       6",False,False,False,False,False,"[[7.0 8.0 6.0]
+ [6.0 7.0 7.0]
+ [8.0 9.0 6.0]
+ [7.0 8.0 5.0]
+ [9.0 7.0 6.0]]"
+"To study the effect of three different diets on weight loss the following data represents the weight loss (in kg) for participants after one month:
+Use one-way ANOVA to determine if there are significant differences in weight loss at the 0.05 level.",0.05,CRD,"14 Diet A Diet B Diet C
+0       5      4      6
+1       6      5      7
+2       4      6      5
+3       5      4      6
+4       6      5      7",False,False,False,False,False,"[[5.0 4.0 6.0]
+ [6.0 5.0 7.0]
+ [4.0 6.0 5.0]
+ [5.0 4.0 6.0]
+ [6.0 5.0 7.0]]"
+"The preference scores (out of 10) for three different packaging designs across two different markets:
+Use a two-way ANOVA to determine if packaging design and market type affect customer preference. Set α = 0.05.",0.05,FD,"21    Market Packaging A Packaging B Packaging C
+0   Market 1           8           7           9
+1   Market 1           9           6           8
+2   Market 1           7           8           9
+3   Market 2           6           9           7
+4   Market 2           8           7           6
+5   Market 2           7           8           9",False,False,True,True,False,"[[8.0 7.0 9.0]
+ [9.0 6.0 8.0]
+ [7.0 8.0 9.0]
+ [6.0 9.0 7.0]
+ [8.0 7.0 6.0]
+ [7.0 8.0 9.0]]"
+"The productivity (in units) for employees using different tools and working different shifts:
+Perform a two-way ANOVA to check if the type of tool and shift affect employee productivity at α = 0.05.",0.05,FD,"29        Shift Tool A Tool B Tool C
+0     Day Shift     20     18     22
+1     Day Shift     21     19     23
+2     Day Shift     19     17     21
+3   Night Shift     22     20     18
+4   Night Shift     21     19     17
+5   Night Shift     20     18     19",False,False,True,True,False,"[[20.0 18.0 22.0]
+ [21.0 19.0 23.0]
+ [19.0 17.0 21.0]
+ [22.0 20.0 18.0]
+ [21.0 19.0 17.0]
+ [20.0 18.0 19.0]]"
+"The effectiveness scores (out of 10) of different advertisement types across various media platforms:
+Conduct a two-way ANOVA to determine if advertisement type and platform affect effectiveness at α = 0.05.",0.05,FD,"37 Platform Ad Type 1 Ad Type 2 Ad Type 3
+0        TV         7         8         6
+1        TV         8         7         5
+2        TV         7         9         6
+3    Online         6         7         8
+4    Online         7         8         7
+5    Online         5         6         9",False,False,True,True,False,"[[7.0 8.0 6.0]
+ [8.0 7.0 5.0]
+ [7.0 9.0 6.0]
+ [6.0 7.0 8.0]
+ [7.0 8.0 7.0]
+ [5.0 6.0 9.0]]"
+"The wear of tires from three different brands tested at different speeds (in 10000 miles) is:
+Conduct a randomized block ANOVA to analyze the data at α = 0.01.",0.01,RBD,"45 Supplier Speed 20 mph Speed 40 mph Speed 60 mph
+0         1            6            5            4
+1         2            5            4            3
+2         3            7            6            5
+3         4            6            5            4
+4         5            5            4            3",False,False,True,False,False,"[[6.0 5.0 4.0]
+ [5.0 4.0 3.0]
+ [7.0 6.0 5.0]
+ [6.0 5.0 4.0]
+ [5.0 4.0 3.0]]"
+"The crop yield (in tons) for three types of fertilizers tested on different soil types:
+Use randomized block design ANOVA to determine if there are significant differences in crop yield at the 0.05 level.",0.01,RBD,"52 Soil Type Fertilizer A Fertilizer B Fertilizer C
+0          1          4.5            5          4.8
+1          2          4.7          4.9          4.9
+2          3          4.6          5.1          4.7
+3          4          4.8          5.2          4.6
+4          5          4.7            5          4.8",False,False,True,False,False,"[[4.5 5.0 4.8]
+ [4.7 4.9 4.9]
+ [4.6 5.1 4.7]
+ [4.8 5.2 4.6]
+ [4.7 5.0 4.8]]"
+"The energy consumption (in kWh) for different appliances tested in various households:
+Conduct a randomized block ANOVA to analyze the data at α = 0.01.",0.01,RBD,"59 Household Appliance A Appliance B Appliance C
+0          1         1.2         1.5         1.3
+1          2         1.4         1.6         1.2
+2          3         1.3         1.5         1.4
+3          4         1.2         1.4         1.5
+4          5         1.3         1.5         1.3",False,False,True,False,False,"[[1.2 1.5 1.3]
+ [1.4 1.6 1.2]
+ [1.3 1.5 1.4]
+ [1.2 1.4 1.5]
+ [1.3 1.5 1.3]]"
+Performing these calculations for the machine operator example yields the following.,Insufficient Data,Insufficient Data,"66     1     2     3     4
+0   6.33  6.26  6.44  6.29
+1   6.26  6.36  6.38  6.23
+2   6.31  6.23  6.58  6.19
+3   6.29  6.27  6.54  6.21
+4    6.4  6.19  6.56  6.22",False,False,False,False,False,"[[6.33 6.26 6.44 6.29]
+ [6.26 6.36 6.38 6.23]
+ [6.31 6.23 6.58 6.19]
+ [6.29 6.27 6.54 6.21]
+ [6.4 6.19 6.56 6.22]]"
+"A company has three manufacturing plants and company officials want to determine whether there is a difference in the average age of workers at the three locations. The following data are the ages of five randomly selected workers at each
+plant. Perform a one-way ANOVA to determine whether there is a significant difference in the mean ages of the workers at the three plants. Use = .01 and note that
+the sample sizes are equal.",0.01,CRD,"73 Plant (Employee Ages)        
+0                      1   2   3
+1                     29  32  25
+2                     27  33  24
+3                     30  31  24
+4                     27  34  25
+5                     28  30  26",False,False,False,False,True,"[[29.0 32.0 25.0]
+ [27.0 33.0 24.0]
+ [30.0 31.0 24.0]
+ [27.0 34.0 25.0]
+ [28.0 30.0 26.0]]"
+"Compute a one-way ANOVA on the following data.
+Determine the observed F value. Compare the observed F value with the critical
+table F value and decide whether to reject the null hypothesis. Use = .05.",0.05,CRD,"81  1  2  3
+0   2  5  3
+1   1  3  4
+2   3  6  5
+3   3  4  5
+4   2  5  3
+5   1  3  5",False,False,False,False,False,"[[2.0 5.0 3.0]
+ [1.0 3.0 4.0]
+ [3.0 6.0 5.0]
+ [3.0 4.0 5.0]
+ [2.0 5.0 3.0]
+ [1.0 3.0 5.0]]"
+"Compute a one-way ANOVA on the following data.
+Determine the observed F value. Compare the observed F value with the critical
+table F value and decide whether to reject the null hypothesis. Use = .01.",0.01,CRD,"89   1   2   3   4   5
+0   14  10  11  16  14
+1   13   9  12  17  12
+2   10  12  13  14  13
+3   12   9  12  16  13
+4   13  10  14  17  12",False,False,False,False,False,"[[14.0 10.0 11.0 16.0 14.0]
+ [13.0 9.0 12.0 17.0 12.0]
+ [10.0 12.0 13.0 14.0 13.0]
+ [12.0 9.0 12.0 16.0 13.0]
+ [13.0 10.0 14.0 17.0 12.0]]"
+"Develop a one-way ANOVA on the following data.
+Determine the observed F value. Compare it to the critical F value and decide
+whether to reject the null hypothesis. Use a 1% level of significance.",0.01,CRD,"96    1    2    3    4
+0   113  120  132  122
+1   121  127  130  118
+2   117  125  129  125
+3   110  129  135  125",False,False,False,False,False,"[[113.0 120.0 132.0 122.0]
+ [121.0 127.0 130.0 118.0]
+ [117.0 125.0 129.0 125.0]
+ [110.0 129.0 135.0 125.0]]"
+"Compute a one-way ANOVA on the following data.
+Determine the observed F value. Compare it to the critical table F value and decide
+whether to reject the null hypothesis. Perform a t test for independent measures on
+the data. Compare the t and F values. Are the results different? Use = .05.",0.05,Insufficient Data,"102   1   2
+0    27  22
+1    31  27
+2    31  25
+3    29  23
+4    30  26
+5    27  27
+6    28  23",False,False,False,False,False,"[[27.0 22.0]
+ [31.0 27.0]
+ [31.0 25.0]
+ [29.0 23.0]
+ [30.0 26.0]
+ [27.0 27.0]
+ [28.0 23.0]]"
+Compute a one-way ANOVA on the following data. Use alpha = 0.05. If there is a significant difference in treatment levels compute multiple comparisons. Let alpha = 0.05 for the multiple comparisons.,0.05,CRD,"111   1  2   3   4
+0    10  9  12  10
+1    12  7  13  10
+2    15  9  14  13
+3    11  6  14  12",False,False,False,False,False,"[[10.0 9.0 12.0 10.0]
+ [12.0 7.0 13.0 10.0]
+ [15.0 9.0 14.0 13.0]
+ [11.0 6.0 14.0 12.0]]"
+"A milk company has four machines that fill gallon jugs with milk. The quality control
+manager is interested in determining whether the average fill for these machines is
+the same. The following data represent random samples of fill measures (in quarts)
+for 19 jugs of milk filled by the different machines. Use = .01 to test the 
+hypotheses. Discuss the business implications of your findings.",0.01,CRD,"117 Machine 1  Machine 2 Machine 3 Machine 4
+0         4.05      3.99      3.97         4
+1         4.01      4.02      3.98      4.02
+2         4.02      4.01      3.97      3.99
+3         4.04      3.99      3.95      4.01
+4         4.05      3.99      3.97         4
+5         4.01      4.02      3.98      4.02",False,False,False,False,False,"[[4.05 3.99 3.97 4.0]
+ [4.01 4.02 3.98 4.02]
+ [4.02 4.01 3.97 3.99]
+ [4.04 3.99 3.95 4.01]
+ [4.05 3.99 3.97 4.0]
+ [4.01 4.02 3.98 4.02]]"
+"That the starting salaries of new accounting graduates would differ according to
+geographic regions of the United States seems logical. A random selection of
+accounting firms is taken from three geographic regions and each is asked to state
+the starting salary for a new accounting graduate who is going to work in auditing.
+The data obtained follow. Use a one-way ANOVA to analyze these data. Note that
+the data can be restated to make the computations more reasonable (example:
+$42500 = 4.25). Use a 1% level of significance. Discuss the business implications of
+your findings.",0.01,CRD,"125  South Northeast   West
+0    40500     51000  45500
+1    41500     49500  43500
+2    40000     49000  45000
+3    41000     48000  46500
+4    41500     49500  46000",False,False,False,False,False,"[[40500.0 51000.0 45500.0]
+ [41500.0 49500.0 43500.0]
+ [40000.0 49000.0 45000.0]
+ [41000.0 48000.0 46500.0]
+ [41500.0 49500.0 46000.0]]"
+"A management consulting company presents a three-day seminar on project management to various clients. The seminar is basically the same each time it is given. However sometimes it is presented to high-level managers sometimes to midlevel managers and sometimes to low-level managers. The seminar facilitators believe evaluations of the seminar may vary with the audience. Suppose the  following data are some randomly selected evaluation scores from different levels of managers who attended the seminar. The ratings are on a scale from 1 to 10 with 10 being the highest. Use a one-way ANOVA to determine whether there is a significant difference in the evaluations according to manager level. Assume = .05. Discuss
+the business implications of your findings",0.05,CRD,"132 High Level Mid Level Low Level
+0            7         8         5
+1            7         9         6
+2            8         8         5
+3            7        10         7
+4            9         9         4
+5            7         9         6
+6            8         8         5",False,False,False,False,False,"[[7.0 8.0 5.0]
+ [7.0 9.0 6.0]
+ [8.0 8.0 5.0]
+ [7.0 10.0 7.0]
+ [9.0 9.0 4.0]
+ [7.0 9.0 6.0]
+ [8.0 8.0 5.0]]"
+Family transportation costs are usually higher than most people believe because those costs include car payments insurance fuel costs repairs parking and public transportation. Twenty randomly selected families in four major cities are asked to use their records to estimate a monthly figure for transportation cost. Use the data obtained and ANOVA to test whether there is a significant difference in monthly transportation costs for families living in these cities. Assume that = .05. Discuss the business implications of your findings.,0.05,CRD,"141 Atlanta New York Los Angeles Chicago
+0       650      250         850     540
+1       480      525         700     450
+2       550      300         950     675
+3       600      175         780     550
+4       675      500         600     600",False,False,False,False,False,"[[650.0 250.0 850.0 540.0]
+ [480.0 525.0 700.0 450.0]
+ [550.0 300.0 950.0 675.0]
+ [600.0 175.0 780.0 550.0]
+ [675.0 500.0 600.0 600.0]]"
+Suppose a national travel association studied the cost of premium unleaded gasoline in the United States during the summer of 2010. From experience association direc- tors believed there was a significant difference in the average cost of a gallon of pre- mium gasoline among urban areas in different parts of the country. To test this belief they placed random calls to gasoline stations in five different cities. In addition the researchers realized that the brand of gasoline might make a difference. They were mostly interested in the differences between cities so they made city their treatment variable. To control for the fact that pricing varies with brand the researchers included brand as a blocking variable and selected six different brands to participate. The researchers randomly telephoned one gasoline station for each brand in each city resulting in 30 measurements (five cities and six brands). Each station operator was asked to report the current cost of a gallon of premium unleaded gasoline at that station. The data are shown here. Test these data by using a randomized block design analysis to determine whether there is a significant difference in the average cost of premium unleaded gasoline by city. Let a = .01.,0.01,RBD,"148 Brand Miami Philadelphia  Minneapolis San Antonio Oakland
+0       A  3.47           3.4        3.38        3.32     3.5
+1       B  3.43          3.41        3.42        3.35    3.44
+2       C  3.44          3.41        3.43        3.36    3.45
+3       D  3.46          3.45         3.4         3.3    3.45
+4       E  3.46           3.4        3.39        3.39    3.48
+5       F  3.44          3.43        3.42        3.39    3.49",False,False,True,False,False,"[[3.47 3.4 3.38 3.32 3.5]
+ [3.43 3.41 3.42 3.35 3.44]
+ [3.44 3.41 3.43 3.36 3.45]
+ [3.46 3.45 3.4 3.3 3.45]
+ [3.46 3.4 3.39 3.39 3.48]
+ [3.44 3.43 3.42 3.39 3.49]]"
+"Use ANOVA to analyze the data from the randomized block design given here. Let alpha = 0.05
+State the null and alternative hypotheses and determine whether the null
+hypothesis is rejected.",0.05,RBD,"156        Treatment level            
+0    Block               1   2   3   4
+1        1              23  26  24  24
+2        2              31  35  32  33
+3        3              27  29  26  27
+4        4              21  28  27  22
+5        5              18  25  27  20",False,False,True,False,True,"[[23.0 26.0 24.0 24.0]
+ [31.0 35.0 32.0 33.0]
+ [27.0 29.0 26.0 27.0]
+ [21.0 28.0 27.0 22.0]
+ [18.0 25.0 27.0 20.0]]"
+"The following data were gathered from a randomized block design. Use to alpha = 0.01
+test for a significant difference in the treatment levels. Establish the hypotheses and
+reach a conclusion about the null hypothesis.",0.01,RBD,"164        Treatment level            
+0    Block               1     2     3
+1        1            1.28  1.29  1.29
+2        2             1.4  1.36  1.35
+3        3            1.15  1.13  1.19
+4        4            1.22  1.18  1.24",False,False,True,False,True,"[[1.28 1.29 1.29]
+ [1.4 1.36 1.35]
+ [1.15 1.13 1.19]
+ [1.22 1.18 1.24]]"
+"Safety in motels and hotels is a growing concern among travelers. Suppose a survey
+was conducted by the National Motel and Hotel Association to determine U.S.
+travelers’ perception of safety in various motel chains. The association chose four
+different national chains from the economy lodging sector and randomly selected 
+10 people who had stayed overnight in a motel in each of the four chains in the past
+two years. Each selected traveler was asked to rate each motel chain on a scale from 
+0 to 100 to indicate how safe he or she felt at that motel. A score of 0 indicates
+completely unsafe and a score of 100 indicates perfectly safe. The scores follow. Test
+this randomized block design to determine whether there is a significant difference
+in the safety ratings of the four motels. Use alpha = .05",0.05,RBD,"171 Traveler Motel 1 Motel 2 Motel 3 Motel 4
+0          1      40      30      55      45
+1          2      65      50      80      70
+2          3      60      55      60      60
+3          4      20      40      55      50
+4          5      50      35      65      60
+5          6      30      30      50      50
+6          7      55      30      60      55
+7          8      70      70      70      70
+8          9      65      60      80      75
+9         10      45      25      45      50",False,False,True,False,False,"[[40.0 30.0 55.0 45.0]
+ [65.0 50.0 80.0 70.0]
+ [60.0 55.0 60.0 60.0]
+ [20.0 40.0 55.0 50.0]
+ [50.0 35.0 65.0 60.0]
+ [30.0 30.0 50.0 50.0]
+ [55.0 30.0 60.0 55.0]
+ [70.0 70.0 70.0 70.0]
+ [65.0 60.0 80.0 75.0]
+ [45.0 25.0 45.0 50.0]]"
+"In recent years the debate over the U.S. economy has been constant. The electorate
+seems somewhat divided as to whether the economy is in a recovery or not.
+Suppose a survey was undertaken to ascertain whether the perception of economic
+recovery differs according to political affiliation. People were selected for the survey
+from the Democratic Party the Republican Party and those classifying themselves
+as independents. A 25-point scale was developed in which respondents gave a score
+of 25 if they felt the economy was definitely in complete recovery a 0 if the economy
+was definitely not in a recovery and some value in between for more uncertain
+responses. To control for differences in socioeconomic class a blocking variable was
+maintained using five different socioeconomic categories. The data are given here in
+the form of a randomized block design. Use to determine whether there is
+a significant difference in mean responses according to political affiliation.",Insufficient Data,RBD,"183                      Political Affiliation                         
+0    Socioeconomic Class             Democrat   Republican  Independent
+1                  Upper                    11           5            8
+2           Upper middle                    15           9            8
+3                 Middle                    19          14           15
+4           Lower middle                    16          12           10
+5                  Lower                     9           8            7",False,False,True,False,True,"[[11.0 5.0 8.0]
+ [15.0 9.0 8.0]
+ [19.0 14.0 15.0]
+ [16.0 12.0 10.0]
+ [9.0 8.0 7.0]]"
+"The data gathered from a two-way factorial design follow. Use the two-way ANOVA
+to analyze these data. let alpha  = 0.01",0.01,FD,"191                   Treatment 1        
+0            NaN  NaN           A   B   C
+1    Treatment 2    A          23  21  20
+2            NaN    A          25  21  22
+3            NaN    B          27  24  26
+4            NaN    B          28  27  27",True,True,True,False,True,"[[23.0 21.0 20.0]
+ [25.0 21.0 22.0]
+ [27.0 24.0 26.0]
+ [28.0 27.0 27.0]]"
+"Suppose the following data have been gathered from a study with a two-way 
+factorial design. Use alpha = 0.05 two-way ANOVA to analyze the data. State your
+conclusions.",0.05,FD,"198                   Treatment 2               
+0            NaN  NaN           A    B    C    D
+1    Treatment 1    A         1.2  2.2  1.7  2.4
+2            NaN    B         1.9  2.7  1.9  2.8",True,True,True,False,True,"[[1.2 2.2 1.7 2.4]
+ [1.9 2.7 1.9 2.8]]"
+"Children are generally believed to have considerable influence over their parents in the purchase of certain items particularly food and beverage items. To study this notion further a study is conducted in which parents are asked to report how many food and beverage items purchased by the family per week are purchased mainly because of the influence of their children. Because the age of the child may have an effect on the study parents are asked to focus on one particular child in the family for the week and to report the age of the child. Four age categories are selected for the children: 4–5 years 6–7 years 8–9 years and 10–12 years. Also because the number of children in the family might make a difference three different sizes of families are chosen for the study: families with one child families with two children and families with three or
+more children. Suppose the following data represent the reported number of child-influenced buying incidents per week. Use the data to compute a two-way ANOVA. Let alpha = 0.05",0.05,FD,"203                              Number of Children in Family              
+0                     NaN    NaN                            1  2  3 or more
+1    Age of Child (years)    4-5                            2  1          1
+2                     NaN    4-5                            4  2          1
+3                     NaN    6-7                            5  3          2
+4                     NaN    6-7                            4  1          1
+5                     NaN    8-9                            8  4          2
+6                     NaN    8-9                            6  5          3
+7                     NaN  10-12                            7  3          4
+8                     NaN  10-12                            8  5          3",True,True,True,False,False,"[[1.0 2.0 '3 or more']
+ [2.0 1.0 1.0]
+ [4.0 2.0 1.0]
+ [5.0 3.0 2.0]
+ [4.0 1.0 1.0]
+ [8.0 4.0 2.0]
+ [6.0 5.0 3.0]
+ [7.0 3.0 4.0]
+ [8.0 5.0 3.0]]"
+A shoe retailer conducted a study to determine whether there is a difference in the number of pairs of shoes sold per day by stores according to the number of competitors within a 1-mile radius and the location of the store. The company researchers selected three types of stores for consideration in the study: stand-alone suburban stores mall stores and downtown stores. These stores vary in the numbers of competing stores within a 1-mile radius which have been reduced to four categories: 0 competitors 1 competitor 2 competitors and 3 or more competitors. Suppose the following data represent the number of pairs of shoes sold per day for each of these types of stores with the given number of competitors. Use alpha = 0.05 two-way ANOVA to analyze the data.,0.05,FD,"214                              Number of Competitors                   
+0               NaN          NaN                     0   1   2  3 or more
+1    Store Location  Stand-Alone                    41  38  59         47
+2               NaN  Stand-Alone                    30  31  48         40
+3               NaN  Stand-Alone                    45  39  51         39
+4               NaN         Mall                    25  29  44         43
+5               NaN         Mall                    31  35  48         42
+6               NaN         Mall                    22  30  50         53
+7               NaN     Downtown                    18  22  29         24
+8               NaN     Downtown                    29  17  28         27
+9               NaN     Downtown                    33  25  26         32",True,True,True,False,False,"[[0.0 1.0 2.0 '3 or more']
+ [41.0 38.0 59.0 47.0]
+ [30.0 31.0 48.0 40.0]
+ [45.0 39.0 51.0 39.0]
+ [25.0 29.0 44.0 43.0]
+ [31.0 35.0 48.0 42.0]
+ [22.0 30.0 50.0 53.0]
+ [18.0 22.0 29.0 24.0]
+ [29.0 17.0 28.0 27.0]
+ [33.0 25.0 26.0 32.0]]"
+"Consider the valve opening data displayed in Table 11.1. Suppose the data 
+represent valves produced on four different machines on three different shifts
+and that the quality controllers want to know whether there is any difference in
+the mean measurements of valve openings by shift or by machine. The data are
+given here organized by machine and shift. In addition Excel has been used to
+analyze the data with a two-way ANOVA. What are the hypotheses for this
+problem? Study the output in terms of significant differences. Discuss the
+results obtained. What conclusions might the quality controllers reach 
+from this analysis?",Insufficient Data,FD,"226               Valve Openings (cm)                  
+0        NaN  NaN             Shift 1  Shift 2  Shift 3
+1    Machine    1                6.56     6.38     6.29
+2        NaN    1                 6.4     6.19     6.23
+3        NaN    2                6.54     6.26     6.19
+4        NaN    2                6.34     6.23     6.33
+5        NaN    3                6.58     6.22     6.26
+6        NaN    3                6.44     6.27     6.31
+7        NaN    4                6.36     6.29     6.21
+8        NaN    4                 6.5     6.19     6.58",True,True,True,False,False,"[['Shift 1' 'Shift 2' 'Shift 3']
+ [6.56 6.38 6.29]
+ [6.4 6.19 6.23]
+ [6.54 6.26 6.19]
+ [6.34 6.23 6.33]
+ [6.58 6.22 6.26]
+ [6.44 6.27 6.31]
+ [6.36 6.29 6.21]
+ [6.5 6.19 6.58]]"
+ Compute a one-way ANOVA of the following data. Let alpha = 0.01.Cconduct multiple comparisons for the means.,0.01,CRD,"237 Treatment        
+0           1   2   3
+1           7  11   8
+2          12  17   6
+3           9  16  10
+4          11  13   9
+5           8  10  11
+6           9  15   7
+7          11  14  10
+8          10  18   9",False,False,False,False,True,"[[7.0 11.0 8.0]
+ [12.0 17.0 6.0]
+ [9.0 16.0 10.0]
+ [11.0 13.0 9.0]
+ [8.0 10.0 11.0]
+ [9.0 15.0 7.0]
+ [11.0 14.0 10.0]
+ [10.0 18.0 9.0]]"
+" Analyze the following data gathered from a randomized block design using If there is a significant
+difference in the treatment effects do multiple comparisons.",Insufficient Data,RBD,"248                         Treatment            
+0                  NaN  NaN         A   B   C   D
+1    BLOCKING VARIABLE    1        17  10   9  21
+2                  NaN    2        13   9   8  16
+3                  NaN    3        20  17  18  22
+4                  NaN    4        11   6   5  10
+5                  NaN    5        16  13  14  22
+6                  NaN    6        23  19  20  28",True,False,True,False,True,"[[1.0 17.0 10.0 9.0 21.0]
+ [2.0 13.0 9.0 8.0 16.0]
+ [3.0 20.0 17.0 18.0 22.0]
+ [4.0 11.0 6.0 5.0 10.0]
+ [5.0 16.0 13.0 14.0 22.0]
+ [6.0 23.0 19.0 20.0 28.0]]"
+Compute a two-way ANOVA on the following data (alpha = 0.01),0.01,FD,"257                 Treatment 1        
+0          NaN  NaN           A   B   C
+1    Treatment    A           5   2   2
+2          NaN    A           3   4   3
+3          NaN    A           6   4   5
+4          NaN    B          11   9  13
+5          NaN    B           8  10  12
+6          NaN    B          12   8  10
+7          NaN    C           6   7   4
+8          NaN    C           4   6   6
+9          NaN    C           5   7   8
+10         NaN    D           9   8   8
+11         NaN    D          11  12   9
+12         NaN    D           9   9  11",True,True,True,False,True,"[[5.0 2.0 2.0]
+ [3.0 4.0 3.0]
+ [6.0 4.0 5.0]
+ [11.0 9.0 13.0]
+ [8.0 10.0 12.0]
+ [12.0 8.0 10.0]
+ [6.0 7.0 4.0]
+ [4.0 6.0 6.0]
+ [5.0 7.0 8.0]
+ [9.0 8.0 8.0]
+ [11.0 12.0 9.0]
+ [9.0 9.0 11.0]]"
+"A company conducted a consumer research project to ascertain customer service ratings from its customers.
+The customers were asked to rate the company on a scale from 1 to 7 on various quality characteristics. One
+question was the promptness of company response to a repair problem. The following data represent customer responses to this question. The customers were divided by geographic region and by age. Use analysis of variance to analyze the responses. Let alpha = 0.05. Compute multiple comparisons where they are appropriate. Graph the cell means and observe any interaction.",0.05,FD,"272               Geographic Region                          
+0    NaN      NaN         Southeast  West  Midwest  Northeast
+1    Age    21-35                 3     2        3          2
+2    NaN    21-35                 2     4        3          3
+3    NaN    21-35                 3     3        2          2
+4    NaN    36-50                 5     4        5          6
+5    NaN    36-50                 5     4        6          4
+6    NaN    36-50                 4     6        5          5
+7    NaN  Over 50                 3     2        3          3
+8    NaN  Over 50                 1     2        2          2
+9    NaN  Over 50                 2     3        3          1",True,True,True,False,True,"[[3.0 2.0 3.0 2.0]
+ [2.0 4.0 3.0 3.0]
+ [3.0 3.0 2.0 2.0]
+ [5.0 4.0 5.0 6.0]
+ [5.0 4.0 6.0 4.0]
+ [4.0 6.0 5.0 5.0]
+ [3.0 2.0 3.0 3.0]
+ [1.0 2.0 2.0 2.0]
+ [2.0 3.0 3.0 1.0]]"
+"A major automobile manufacturer wants to know whether there is any difference in the average mileage
+of four different brands of tires (A B C and D) because the manufacturer is trying to select the best
+supplier in terms of tire durability. The manufacturer selects comparable levels of tires from each company
+and tests some on comparable cars. The mileage results follow.
+Use alpha = 0.05  to test whether there is a significant difference in the mean mileage of these four brands. Assume tire mileage is normally distributed.",0.05,CRD,"284      A      B      C      D
+0    31000  24000  30500  24500
+1    25000  25500  28000  27000
+2    28500  27000  32500  26000
+3    29000  26500  28000  21000
+4    32000  25000  31000  25500",False,False,False,False,False,"[[31000.0 24000.0 30500.0 24500.0]
+ [25000.0 25500.0 28000.0 27000.0]
+ [28500.0 27000.0 32500.0 26000.0]
+ [29000.0 26500.0 28000.0 21000.0]
+ [32000.0 25000.0 31000.0 25500.0]]"
+Agricultural researchers are studying three different ways of planting peanuts to determine whether significantly different levels of production yield will result. The researchers have access to a large peanut farm on which to conduct their tests. They identify six blocks of land. In each block of land peanuts are planted in each of the three different ways. At the end of the growing season the peanuts are harvested and the average number of pounds per acre is determined for peanuts planted under each method in each block. Using the following data and alpha = 0.01 test to determine whether there is a significant difference in yields among the planting methods.,0.01,RBD,"291 Block Method 1 Method 2 Method 3
+0       1     1310     1080      850
+1       2     1275     1100     1020
+2       3     1280     1050      780
+3       4     1225     1020      870
+4       5     1190      990      805
+5       6     1300     1030      910",False,False,True,False,False,"[[1310.0 1080.0 850.0]
+ [1275.0 1100.0 1020.0]
+ [1280.0 1050.0 780.0]
+ [1225.0 1020.0 870.0]
+ [1190.0 990.0 805.0]
+ [1300.0 1030.0 910.0]]"
+"The Construction Labor Research Council lists a number of construction labor jobs that seem to pay approximately the same wages per hour. Some of these are bricklaying iron working and crane operation. Suppose a labor researcher takes a random sample of workers from each of these types of construction jobs and from across the country and asks what are their hourly wages. If this survey yields the following data is there a significant difference in mean hourly wages for these three jobs? If there is
+a significant difference use the Anova procedure to determine which pairs if any are also significantly different. Let alpha = 0.05",0.05,CRD,"299     Job Type                               
+0    Bricklaying  Iron Working  Crane Operation
+1          19.25         26.45             16.2
+2           17.8          21.1             23.3
+3           20.5          16.4             22.9
+4          24.33         22.86             19.5
+5          19.81         25.55               27
+6          22.29          18.5            22.95",False,False,True,False,False,"[['Iron Working' 'Crane Operation']
+ [26.45 16.2]
+ [21.1 23.3]
+ [16.4 22.9]
+ [22.86 19.5]
+ [25.55 27.0]
+ [18.5 22.95]]"
+"Why are mergers attractive to CEOs? One of the reasons might be a potential increase in market share that can come with the pooling of company markets. Suppose a random survey of CEOs is taken and they
+are asked to respond on a scale from 1 to 5 (5 representing strongly agree) whether increase in market share is a good reason for considering a merger of their company with another. Suppose also that the data are as given here and that CEOs have been categorized by size of company and years they have been with their company. Use a two-way ANOVA to determine whether there are any significant differences in the responses to this question. Let alpha = 0.05",0.05,FD,"308                                  \
+0                       NaN     NaN   
+1    Years with the Company     0-2   
+2                       NaN     0-2   
+3                       NaN     0-2   
+4                       NaN     0-2   
+5                       NaN     3-5   
+6                       NaN     3-5   
+7                       NaN     3-5   
+8                       NaN     3-5   
+9                       NaN  Over 5   
+10                      NaN  Over 5   
+11                      NaN  Over 5   
+12                      NaN  Over 5   
+
+308 Company Size ($ million per year in sales)                      
+0                                          0-5  6-20  21-100  >100  
+1                                            2     2       3     3  
+2                                            3     1       4     4  
+3                                            2     2       4     4  
+4                                            2     3       5     3  
+5                                            2     2       3     3  
+6                                            1     3       2     3  
+7                                            2     2       4     3  
+8                                            3     3       4     4  
+9                                            2     2       3     2  
+10                                           1     3       2     3  
+11                                           1     1       3     2  
+12                                           2     2       3     3  ",True,True,True,False,False,"[['0-5' '6-20' '21-100' '>100']
+ [2.0 2.0 3.0 3.0]
+ [3.0 1.0 4.0 4.0]
+ [2.0 2.0 4.0 4.0]
+ [2.0 3.0 5.0 3.0]
+ [2.0 2.0 3.0 3.0]
+ [1.0 3.0 2.0 3.0]
+ [2.0 2.0 4.0 3.0]
+ [3.0 3.0 4.0 4.0]
+ [2.0 2.0 3.0 2.0]
+ [1.0 3.0 2.0 3.0]
+ [1.0 1.0 3.0 2.0]
+ [2.0 2.0 3.0 3.0]]"
+"Are some unskilled office jobs viewed as having more status than others? Suppose a study is conducted in
+which eight unskilled unemployed people are interviewed. The people are asked to rate each of five positions on a scale from 1 to 10 to indicate the status of the position with 10 denoting most status and 1 denoting least status. The resulting data are given below. Use alpha = 0.05 to analyze the repeated measures randomized block design data.",0.05,RBD,"323                         JOB                                   \
+0          NaN  NaN  Mail Clerk  Typist  Receptionist  Secretary   
+1    Respodent    1           4       5             3          7   
+2          NaN    2           2       4             4          5   
+3          NaN    3           3       3             2          6   
+4          NaN    4           4       4             4          5   
+5          NaN    5           3       5             1          3   
+6          NaN    6           3       4             2          7   
+7          NaN    7           2       2             2          4   
+8          NaN    8           3       4             3          6   
+
+323                      
+0    Telephone Operator  
+1                     6  
+2                     4  
+3                     7  
+4                     4  
+5                     5  
+6                     7  
+7                     4  
+8                     6  ",True,False,True,False,True,"[[1.0 4.0 5.0 3.0 7.0 6.0]
+ [2.0 2.0 4.0 4.0 5.0 4.0]
+ [3.0 3.0 3.0 2.0 6.0 7.0]
+ [4.0 4.0 4.0 4.0 5.0 4.0]
+ [5.0 3.0 5.0 1.0 3.0 5.0]
+ [6.0 3.0 4.0 2.0 7.0 7.0]
+ [7.0 2.0 2.0 2.0 4.0 4.0]
+ [8.0 3.0 4.0 3.0 6.0 6.0]]"
+Pipeline operators estimate that it costs between $75 and $500 in U.S. currency to replace each seal thus making the Clarkson longer-lasting valves more attractive. Tyco does business with pipeline companies around the world. Suppose in an attempt to develop marketing materials Tyco marketers are interested in determining whether there is a significant difference in the cost of replacing pipeline seals in different countries. Four countrie Canada Colombia Taiwan and the United States are chosen for the study. Pipeline operators from equivalent operations are selected from companies in each country. The operators keep a cost log of seal replacements. A random sample of the data follows. Use these data to help Tyco determine whether there is a difference in the cost of seal replacements in the various countries. Explain your answer and tell how Tyco might use the information in their marketing materials.,Insufficient Data,CRD,"334 Canada Colombia Taiwan United States
+0      215      355    170           230
+1      205      280    190           190
+2      245      300    235           225
+3      270      330    195           220
+4      290      360    205           215
+5      260      340    180           245
+6      225      300    190           230",False,False,False,False,False,"[[215.0 355.0 170.0 230.0]
+ [205.0 280.0 190.0 190.0]
+ [245.0 300.0 235.0 225.0]
+ [270.0 330.0 195.0 220.0]
+ [290.0 360.0 205.0 215.0]
+ [260.0 340.0 180.0 245.0]
+ [225.0 300.0 190.0 230.0]]"
+In the late 1980s the Clarkson Company installed a manufacturing resource planning system. Using this and other quality improvement approaches the company was able to reduce lead-time from six to eight weeks to less than two weeks. Suppose that Tyco now uses a similar system and wants to test to determine whether lead-times differ significantly according to the type of valve it is manufacturing. As a control of the experiment they are including in the study as a blocking variable the day of the week the valve was ordered. One lead-time was selected per valve per day of the week. The data are given here in weeks. Analyze the data and discuss your findings.,Insufficient Data,RBD,"343            Type of Valve                                         
+0         Days        Safety  Butterfly  Clack  Slide  Poppet  Needle
+1       Monday           1.6        2.2    1.3    1.8     2.5     0.8
+2      Tuesday           1.8          2    1.4    1.5     2.4       1
+3    Wednesday             1        1.8      1    1.6       2     0.8
+4     Thursday           1.8        2.2    1.4    1.6     1.8     0.6
+5       Friday             2        2.4    1.5    1.8     2.2     1.2",False,True,True,False,True,"[[1.6 2.2 1.3 1.8 2.5 0.8]
+ [1.8 2.0 1.4 1.5 2.4 1.0]
+ [1.0 1.8 1.0 1.6 2.0 0.8]
+ [1.8 2.2 1.4 1.6 1.8 0.6]
+ [2.0 2.4 1.5 1.8 2.2 1.2]]"
+"A teacher wants to compare the test scores of students using three different study methods. The scores are as follows:
+Perform a one-way ANOVA to determine if there is a significant difference in test scores among the methods at α = 0.05.",0.05,CRD,"351 Method A Method B Method C
+0         78       85       80
+1         82       87       83
+2         79       84       82
+3         81       86       81
+4         80       83       84",False,False,False,False,False,"[[78.0 85.0 80.0]
+ [82.0 87.0 83.0]
+ [79.0 84.0 82.0]
+ [81.0 86.0 81.0]
+ [80.0 83.0 84.0]]"
+"A botanist is examining the effect of different fertilizers on plant growth. The following data represents the growth (in cm) of plants:
+Conduct a one-way ANOVA to see if there are significant differences in plant growth at α = 0.01.",0.01,CRD,"358 Fertilizer X Fertilizer Y Fertilizer Z
+0             25           30           28
+1             26           31           29
+2             27           32           27
+3             24           29           30
+4             28           30           28",False,False,False,False,False,"[[25.0 30.0 28.0]
+ [26.0 31.0 29.0]
+ [27.0 32.0 27.0]
+ [24.0 29.0 30.0]
+ [28.0 30.0 28.0]]"
+"A company wants to evaluate the effectiveness of three training programs based on employee performance scores:
+Use one-way ANOVA to determine if there are significant differences in performance scores at α = 0.05.",0.05,CRD,"365 Program 1 Program 2 Program 3
+0          88        92        90
+1          87        91        89
+2          89        90        91
+3          90        93        88
+4          91        89        92",False,False,False,False,False,"[[88.0 92.0 90.0]
+ [87.0 91.0 89.0]
+ [89.0 90.0 91.0]
+ [90.0 93.0 88.0]
+ [91.0 89.0 92.0]]"
+"A retail store is comparing customer satisfaction ratings for three different service approaches:
+Perform a one-way ANOVA to check if there are significant differences in customer satisfaction at α = 0.01.",0.01,CRD,"372 Approach A Approach B Approach C
+0          4.2        4.5          4
+1          4.1        4.3        4.2
+2          4.3        4.4        4.1
+3            4        4.2        4.3
+4          4.4        4.6        4.1",False,False,False,False,False,"[[4.2 4.5 4.0]
+ [4.1 4.3 4.2]
+ [4.3 4.4 4.1]
+ [4.0 4.2 4.3]
+ [4.4 4.6 4.1]]"
+"A company wants to compare sales figures from three different regions:
+Conduct a one-way ANOVA to determine if there are significant differences in sales figures at α = 0.05.",0.05,CRD,"379 Region 1 Region 2 Region 3
+0        150      160      155
+1        145      158      152
+2        148      162      153
+3        151      159      154
+4        149      161      150",False,False,False,False,False,"[[150.0 160.0 155.0]
+ [145.0 158.0 152.0]
+ [148.0 162.0 153.0]
+ [151.0 159.0 154.0]
+ [149.0 161.0 150.0]]"
+"Researchers are testing the effect of three dietary supplements on weight gain in rats:
+Use one-way ANOVA to check if there are significant differences in weight gain at α = 0.01.",0.01,CRD,"386 Supplement A Supplement B Supplement C
+0            2.5            3          2.8
+1            2.6          3.1          2.9
+2            2.4          2.9          2.7
+3            2.7          3.2          2.8
+4            2.5            3          2.9",False,False,False,False,False,"[[2.5 3.0 2.8]
+ [2.6 3.1 2.9]
+ [2.4 2.9 2.7]
+ [2.7 3.2 2.8]
+ [2.5 3.0 2.9]]"
+"A study is conducted to compare the energy consumption of three different light bulbs:
+Perform a one-way ANOVA to determine if there are significant differences in energy consumption at α = 0.05.",0.05,CRD,"393 Bulb A Bulb B Bulb C
+0       60     55     50
+1       58     54     49
+2       59     56     51
+3       60     55     52
+4       57     53     50",False,False,False,False,False,"[[60.0 55.0 50.0]
+ [58.0 54.0 49.0]
+ [59.0 56.0 51.0]
+ [60.0 55.0 52.0]
+ [57.0 53.0 50.0]]"
+"A gym is evaluating the effectiveness of three workout programs based on weight loss:
+Use one-way ANOVA to determine if there are significant differences in weight loss at α = 0.05.",0.05,CRD,"400 Program X Program Y Program Z
+0         3.5         4       3.8
+1         3.6       3.9       4.1
+2         3.4       4.2       3.9
+3         3.7       4.1         4
+4         3.8         4       3.7",False,False,False,False,False,"[[3.5 4.0 3.8]
+ [3.6 3.9 4.1]
+ [3.4 4.2 3.9]
+ [3.7 4.1 4.0]
+ [3.8 4.0 3.7]]"
+"A software company is comparing usability scores for three different versions of their software:
+Perform a one-way ANOVA to check if there are significant differences in usability scores at α = 0.05.",0.05,CRD,"407 Version 1 Version 2 Version 3
+0         7.8         8       7.9
+1         7.9       8.1       7.8
+2         7.7       8.2       7.9
+3         7.6         8         8
+4         7.8       8.1       7.7",False,False,False,False,False,"[[7.8 8.0 7.9]
+ [7.9 8.1 7.8]
+ [7.7 8.2 7.9]
+ [7.6 8.0 8.0]
+ [7.8 8.1 7.7]]"
+"A company wants to compare the effectiveness of three marketing campaigns based on sales increase:
+Conduct a one-way ANOVA to determine if there are significant differences in campaign effectiveness at α = 0.01.",0.01,CRD,"414 Campaign A Campaign B Campaign C
+0          12%        15%        13%
+1          11%        14%        12%
+2          12%        16%        13%
+3          13%        14%        14%
+4          12%        15%        12%",False,False,True,False,False,"[['15%' '13%']
+ ['14%' '12%']
+ ['16%' '13%']
+ ['14%' '14%']
+ ['15%' '12%']]"
+"The retention scores (out of 10) of students using different study aids across various subjects:
+Conduct a randomized block ANOVA to see if there are significant differences in retention scores at α = 0.05.",0.05,RBD,"421  Subject Aid 1 Aid 2 Aid 3
+0       Math   7.5     8   7.8
+1    Science     8   8.2   7.9
+2    English   7.8   8.1     8
+3    History   7.7     8   7.9
+4        Art   7.6   8.2   7.8",False,False,True,False,False,"[[7.5 8.0 7.8]
+ [8.0 8.2 7.9]
+ [7.8 8.1 8.0]
+ [7.7 8.0 7.9]
+ [7.6 8.2 7.8]]"
+"The effectiveness of three blood pressure medications tested on different patient groups:
+Perform a randomized block ANOVA to determine if there are significant differences in medication effectiveness at α = 0.01.",0.01,RBD,"428 Patient Group Medication A Medication B Medication C
+0         Group 1          120          118          119
+1         Group 2          121          117          120
+2         Group 3          119          116          118
+3         Group 4          118          117          119
+4         Group 5          120          118          117",False,False,True,False,False,"[[121.0 117.0 120.0]
+ [119.0 116.0 118.0]
+ [118.0 117.0 119.0]
+ [120.0 118.0 117.0]]"
+"The yield (in kg) of three different crop varieties grown in different soil types:
+Use a randomized block ANOVA to check if there are significant differences in crop yield at α = 0.05.",0.05,RBD,"435 Soil Type Variety 1 Variety 2 Variety 3
+0      Soil A       3.5       3.8       3.6
+1      Soil B       3.6       3.9       3.7
+2      Soil C       3.7         4       3.8
+3      Soil D       3.8       3.7       3.9
+4      Soil E       3.9       3.6         4",False,False,True,False,False,"[[3.5 3.8 3.6]
+ [3.6 3.9 3.7]
+ [3.7 4.0 3.8]
+ [3.8 3.7 3.9]
+ [3.9 3.6 4.0]]"
+"The impact of three exercise regimens on muscle strength across different age groups:
+Conduct a randomized block ANOVA to determine if there are significant differences in muscle strength at α = 0.01.",0.01,RBD,"442 Age Group Regimen 1 Regimen 2 Regimen 3
+0       20-30        50        52        51
+1       31-40        48        50        49
+2       41-50        49        51        50
+3       51-60        47        48        46
+4       61-70        46        47        45",False,False,True,False,False,"[[50.0 52.0 51.0]
+ [48.0 50.0 49.0]
+ [49.0 51.0 50.0]
+ [47.0 48.0 46.0]
+ [46.0 47.0 45.0]]"
+"The satisfaction ratings (out of 10) of different website designs across various user demographics:
+Use a randomized block ANOVA to check if there are significant differences in satisfaction ratings at α = 0.05.",0.05,RBD,"449 Demographic Design A Design B Design C
+0         18-25      7.5        8      7.8
+1         26-35        8      8.2      7.9
+2         36-45      7.8      8.1        8
+3         46-55      7.7        8      7.9
+4           56+      7.6      8.2      7.8",False,False,True,False,False,"[[7.5 8.0 7.8]
+ [8.0 8.2 7.9]
+ [7.8 8.1 8.0]
+ [7.7 8.0 7.9]
+ [7.6 8.2 7.8]]"
+"The efficiency scores of different study techniques across various student groups:
+Perform a randomized block ANOVA to determine if there are significant differences in efficiency scores at α = 0.01.",0.01,RBD,"456 Student Group Technique A Technique B Technique C
+0         Group 1          80          85          82
+1         Group 2          83          86          84
+2         Group 3          82          87          83
+3         Group 4          81          84          85
+4         Group 5          84          88          86",False,False,True,False,False,"[[80.0 85.0 82.0]
+ [83.0 86.0 84.0]
+ [82.0 87.0 83.0]
+ [81.0 84.0 85.0]
+ [84.0 88.0 86.0]]"
+"The performance scores of employees after using different training programs across various departments:
+Use a randomized block ANOVA to check if there are significant differences in performance scores at α = 0.05.",0.05,RBD,"463 Department Program 1 Program 2 Program 3
+0        Sales        75        80        78
+1    Marketing        78        82        79
+2           HR        77        81        80
+3           IT        76        79        77
+4      Finance        79        83        80",False,False,True,False,False,"[[75.0 80.0 78.0]
+ [78.0 82.0 79.0]
+ [77.0 81.0 80.0]
+ [76.0 79.0 77.0]
+ [79.0 83.0 80.0]]"
+"The quality ratings (out of 10) of different product batches across various production lines:
+Conduct a randomized block ANOVA to determine if there are significant differences in quality ratings at α = 0.01.",0.01,RBD,"470 Production Line Batch A Batch B Batch C
+0            Line 1     8.5     8.8     8.7
+1            Line 2     8.6     8.9     8.8
+2            Line 3     8.7     8.7     8.6
+3            Line 4     8.8     8.6     8.9
+4            Line 5     8.9     8.9     8.8",False,False,True,False,False,"[[8.5 8.8 8.7]
+ [8.6 8.9 8.8]
+ [8.7 8.7 8.6]
+ [8.8 8.6 8.9]
+ [8.9 8.9 8.8]]"
+"The sales performance of different marketing strategies across various regions:
+Perform a randomized block ANOVA to check if there are significant differences in sales performance at α = 0.05.",0.05,RBD,"477   Region Strategy A Strategy B Strategy C
+0      North         55         60         58
+1      South         52         59         57
+2       East         54         58         56
+3       West         53         57         55
+4    Central         56         61         59",False,False,True,False,False,"[[55.0 60.0 58.0]
+ [52.0 59.0 57.0]
+ [54.0 58.0 56.0]
+ [53.0 57.0 55.0]
+ [56.0 61.0 59.0]]"
+"The impact of different classroom environments on student performance across various teaching styles:
+Conduct a randomized block ANOVA to determine if there are significant differences in student performance at α = 0.01.",0.01,RBD,"484 Teaching Style Environment A Environment B Environment C
+0          Style 1            85            80            82
+1          Style 2            88            83            85
+2          Style 3            87            84            86
+3          Style 4            86            81            83
+4          Style 5            89            85            84",False,False,True,False,False,"[[85.0 80.0 82.0]
+ [88.0 83.0 85.0]
+ [87.0 84.0 86.0]
+ [86.0 81.0 83.0]
+ [89.0 85.0 84.0]]"
+"The effectiveness scores of different teaching methods and materials:
+Perform a two-way ANOVA to determine if teaching method and material type impact effectiveness scores at α = 0.05.",0.05,RBD,"491    Material Method A Method B Method C
+0    Material 1       80       85       82
+1    Material 2       83       86       84
+2    Material 3       82       87       83",False,False,True,False,False,"[[80.0 85.0 82.0]
+ [83.0 86.0 84.0]
+ [82.0 87.0 83.0]]"
+"The effectiveness scores of different advertisement types across various media platforms:
+Conduct a two-way ANOVA to see if advertisement type and platform affect effectiveness at α = 0.05.",0.05,RBD,"496 Platform Ad Type 1 Ad Type 2 Ad Type 3
+0         TV         7         8         6
+1     Online         6         7         8
+2      Print         5         6         7",False,False,True,False,False,"[[7.0 8.0 6.0]
+ [6.0 7.0 8.0]
+ [5.0 6.0 7.0]]"
+"The weight loss (in kg) for different diet and exercise combinations:
+Perform a two-way ANOVA to check if diet and exercise impact weight loss at α = 0.01.",0.01,RBD,"501    Exercise Diet A Diet B Diet C
+0    Exercise 1    3.5      4    3.8
+1    Exercise 2    3.6    3.9    4.1
+2    Exercise 3    3.4    4.2    3.9",False,False,True,False,False,"[[3.5 4.0 3.8]
+ [3.6 3.9 4.1]
+ [3.4 4.2 3.9]]"
+"The production output (in units) for different machines operated by different operators:
+Conduct a two-way ANOVA to determine if machine and operator affect production output at α = 0.05.			",0.05,RBD,"506    Operator Machine 1 Machine 2 Machine 3
+0    Operator A       150       160       155
+1    Operator B       145       158       152
+2    Operator C       148       162       153",False,False,True,False,False,"[[150.0 160.0 155.0]
+ [145.0 158.0 152.0]
+ [148.0 162.0 153.0]]"
+"The usability scores (out of 10) for different software versions across various user groups:
+Use a two-way ANOVA to check if software version and user group impact usability scores at α = 0.05.",0.05,RBD,"511 User Group Version 1 Version 2 Version 3
+0      Group 1         7         8         9
+1      Group 2         6         7         8
+2      Group 3         5         6         7",False,False,True,False,True,"[[6.0 7.0 8.0]
+ [5.0 6.0 7.0]]"
+"The effect of different dietary supplements on weight gain (in kg) across various age groups:
+Perform a two-way ANOVA to determine if supplement and age group affect weight gain at α = 0.01.",0.01,RBD,"516 Age Group Supplement A Supplement B Supplement C
+0       20-30          2.5            3          2.8
+1       31-40          2.6          3.1          2.9
+2       41-50          2.4          2.9          2.7",False,False,True,False,False,"[[2.5 3.0 2.8]
+ [2.6 3.1 2.9]
+ [2.4 2.9 2.7]]"
+"The satisfaction scores of employees (out of 10) in different job roles across genders:
+Conduct a two-way ANOVA to check if job role and gender affect satisfaction scores at α = 0.05.",0.05,RBD,"521  Gender Role 1 Role 2 Role 3
+0      Male    7.5      8    7.8
+1    Female      8    8.2    7.9
+2     Other    7.8    8.1      8",False,False,True,False,False,"[[7.5 8.0 7.8]
+ [8.0 8.2 7.9]
+ [7.8 8.1 8.0]]"
+"The sales increase (in %) for different product features in various markets:
+Perform a two-way ANOVA to determine if product feature and market affect sales increase at α = 0.01.",0.01,RBD,"526    Market Feature A Feature B Feature C
+0    Market 1        10        12        11
+1    Market 2        11        13        10
+2    Market 3         9        12        11",False,False,True,False,False,"[[10.0 12.0 11.0]
+ [11.0 13.0 10.0]
+ [9.0 12.0 11.0]]"
+"The test scores of students for different teaching methods across genders:
+Use a two-way ANOVA to check if teaching method and gender affect test scores at α = 0.05.",0.05,RBD,"531  Gender Method A Method B Method C
+0      Male       78       85       80
+1    Female       82       87       83
+2     Other       79       84       82",False,False,True,False,False,"[[78.0 85.0 80.0]
+ [82.0 87.0 83.0]
+ [79.0 84.0 82.0]]"
+"The effectiveness scores (out of 10) for different software features across user types:
+Conduct a two-way ANOVA to determine if software feature and user type impact effectiveness scores at α = 0.05.",0.05,RBD,"536 User Type Feature 1 Feature 2 Feature 3
+0      Type A       7.5         8       7.8
+1      Type B         8       8.2       7.9
+2      Type C       7.8       8.1         8",False,False,True,False,False,"[[7.5 8.0 7.8]
+ [8.0 8.2 7.9]
+ [7.8 8.1 8.0]]"
+"A botanist wants to examine the effect of three different fertilizers on plant growth across four different soil types. The data collected (growth in cm) is as follows:
+Determine if there are significant differences in plant growth due to fertilizers and soil types.",,RBD,"541 Soil Type Fertilizer A Fertilizer B Fertilizer C
+0      Soil 1         15.2         16.4         15.9
+1      Soil 2         14.8           16         15.5
+2      Soil 3         15.5         16.2         15.7
+3      Soil 4           15         16.1         15.6",False,False,True,False,False,"[[15.2 16.4 15.9]
+ [14.8 16.0 15.5]
+ [15.5 16.2 15.7]
+ [15.0 16.1 15.6]]"
+"A researcher is evaluating the efficiency of three study techniques across different student groups based on their grades:
+Investigate if the study techniques and student groups have an impact on grades.",,RBD,"547 Student Group Technique A Technique B Technique C
+0         Group 1          85          88          87
+1         Group 2          83          86          85
+2         Group 3          84          87          86
+3         Group 4          82          85          84",False,False,True,False,False,"[[85.0 88.0 87.0]
+ [83.0 86.0 85.0]
+ [84.0 87.0 86.0]
+ [82.0 85.0 84.0]]"
+"A nutritionist wants to test the effectiveness of three diet programs on weight loss across different age groups. The data collected (weight loss in kg) is as follows:
+Examine the effect of diet programs and age groups on weight loss.",,RBD,"553 Age Group Diet Program A Diet Program B Diet Program C
+0       20-30            3.5              4            3.8
+1       31-40            3.6            3.9            4.1
+2       41-50            3.4            4.2            3.9
+3       51-60            3.7            4.1              4",False,False,True,False,False,"[[3.5 4.0 3.8]
+ [3.6 3.9 4.1]
+ [3.4 4.2 3.9]
+ [3.7 4.1 4.0]]"
+"A company is evaluating the impact of three training programs on employee performance across different departments. The performance scores are as follows:
+Determine if training programs and departments significantly affect employee performance.",,RBD,"559 Department Program A Program B Program C
+0           HR        75        80        78
+1           IT        78        82        79
+2        Sales        77        81        80
+3    Marketing        76        79        77",False,False,True,False,False,"[[75.0 80.0 78.0]
+ [78.0 82.0 79.0]
+ [77.0 81.0 80.0]
+ [76.0 79.0 77.0]]"
+"A gym is comparing the effectiveness of three exercise routines on muscle gain across different age groups. The data collected (muscle gain in kg) is as follows:
+Analyze the impact of exercise routines and age groups on muscle gain.",,RBD,"565 Age Group Routine A Routine B Routine C
+0       20-30       2.5         3       2.8
+1       31-40       2.6       3.1       2.9
+2       41-50       2.4       2.9       2.7
+3       51-60       2.7       3.2       2.8",False,False,True,False,False,"[[2.5 3.0 2.8]
+ [2.6 3.1 2.9]
+ [2.4 2.9 2.7]
+ [2.7 3.2 2.8]]"
+"A pharmaceutical company is testing the effectiveness of three medications on reducing blood pressure across different patient groups. The data collected (reduction in mmHg) is as follows:
+Investigate the effect of medications and patient groups on blood pressure reduction.",,RBD,"571 Patient Group Medication A Medication B Medication C
+0         Group 1           12           14           13
+1         Group 2           13           15           14
+2         Group 3           11           13           12
+3         Group 4           12           14           13",False,False,True,False,False,"[[12.0 14.0 13.0]
+ [13.0 15.0 14.0]
+ [11.0 13.0 12.0]
+ [12.0 14.0 13.0]]"
+"A software company is evaluating the usability of three software versions across different user demographics. The usability scores (out of 10) are as follows:
+Determine if software versions and demographics significantly affect usability scores.",,RBD,"577 Demographic Version A Version B Version C
+0         18-25       7.5         8       7.8
+1         26-35         8       8.2       7.9
+2         36-45       7.8       8.1         8
+3         46-55       7.7         8       7.9",False,False,True,False,False,"[[7.5 8.0 7.8]
+ [8.0 8.2 7.9]
+ [7.8 8.1 8.0]
+ [7.7 8.0 7.9]]"
+"An education researcher is comparing the effectiveness of three teaching methods on student performance across different schools. The performance scores are as follows:
+Analyze the impact of teaching methods and schools on student performance.",,RBD,"583    School Method A Method B Method C
+0    School 1       85       88       87
+1    School 2       83       86       85
+2    School 3       84       87       86
+3    School 4       82       85       84",False,False,True,False,False,"[[85.0 88.0 87.0]
+ [83.0 86.0 85.0]
+ [84.0 87.0 86.0]
+ [82.0 85.0 84.0]]"
+"A company is evaluating the effectiveness of three marketing strategies on sales across different regions. The sales data (in thousands) is as follows:
+Determine if marketing strategies and regions significantly affect sales.",,RBD,"589 Region Strategy A Strategy B Strategy C
+0    North        150        160        155
+1    South        145        158        152
+2     East        148        162        153
+3     West        151        159        154",False,False,True,False,False,"[[150.0 160.0 155.0]
+ [145.0 158.0 152.0]
+ [148.0 162.0 153.0]
+ [151.0 159.0 154.0]]"
+"A health researcher is examining the effect of three diets on weight loss across different exercise routines. The data collected (weight loss in kg) is as follows:
+Examine the impact of diets and exercise routines on weight loss.",,RBD,"595 Exercise Routine Diet A Diet B Diet C
+0          Routine 1    3.5      4    3.8
+1          Routine 2    3.6    3.9    4.1
+2          Routine 3    3.4    4.2    3.9
+3          Routine 4    3.7    4.1      4",False,False,True,False,False,"[[3.5 4.0 3.8]
+ [3.6 3.9 4.1]
+ [3.4 4.2 3.9]
+ [3.7 4.1 4.0]]"
+"A retail store is comparing customer satisfaction across three service approaches and different store locations. The satisfaction scores (out of 10) are as follows:
+Determine if service approaches and store locations significantly affect customer satisfaction.",,RBD,"601 Location Approach A Approach B Approach C
+0    Store 1        7.5          8        7.8
+1    Store 2          8        8.2        7.9
+2    Store 3        7.8        8.1          8
+3    Store 4        7.7          8        7.9",False,False,True,False,False,"[[7.5 8.0 7.8]
+ [8.0 8.2 7.9]
+ [7.8 8.1 8.0]
+ [7.7 8.0 7.9]]"
+"A company is testing the effectiveness of three advertising campaigns on brand awareness across different demographics. The awareness scores (out of 10) are as follows:
+Investigate the effect of advertising campaigns and demographics on brand awareness.",,RBD,"607 Demographic Campaign A Campaign B Campaign C
+0         18-25        7.5          8        7.8
+1         26-35          8        8.2        7.9
+2         36-45        7.8        8.1          8
+3         46-55        7.7          8        7.9",False,False,True,False,False,"[[7.5 8.0 7.8]
+ [8.0 8.2 7.9]
+ [7.8 8.1 8.0]
+ [7.7 8.0 7.9]]"
+"A farmer is comparing the yield of three crop varieties across different irrigation methods. The yield data (in kg) is as follows:
+Determine if crop varieties and irrigation methods significantly affect yield.",,RBD,"613 Irrigation Method Variety A Variety B Variety C
+0            Method 1       150       160       155
+1            Method 2       145       158       152
+2            Method 3       148       162       153
+3            Method 4       151       159       154",False,False,True,False,False,"[[150.0 160.0 155.0]
+ [145.0 158.0 152.0]
+ [148.0 162.0 153.0]
+ [151.0 159.0 154.0]]"
+"A manufacturing company is evaluating the quality of three products across different production lines. The quality scores (out of 10) are as follows:
+Analyze the impact of products and production lines on quality scores.",,RBD,"619 Production Line Product A Product B Product C
+0            Line 1       8.5       8.8       8.7
+1            Line 2       8.6       8.9       8.8
+2            Line 3       8.7       8.7       8.6
+3            Line 4       8.8       8.6       8.9",False,False,True,False,False,"[[8.5 8.8 8.7]
+ [8.6 8.9 8.8]
+ [8.7 8.7 8.6]
+ [8.8 8.6 8.9]]"
+"An energy company is testing the efficiency of three energy-saving devices across different building types. The consumption data (in kWh) is as follows:
+Investigate the effect of energy-saving devices and building types on energy consumption.",,RBD,"625 Building Type Device A Device B Device C
+0          Type 1      150      160      155
+1          Type 2      145      158      152
+2          Type 3      148      162      153
+3          Type 4      151      159      154",False,False,True,False,False,"[[150.0 160.0 155.0]
+ [145.0 158.0 152.0]
+ [148.0 162.0 153.0]
+ [151.0 159.0 154.0]]"
+"A factory is testing the efficiency of three different machines across four different raw materials and two shift times. The data collected (efficiency score out of 100) is as follows:
+Analyze the effect of raw materials shift times and machines on efficiency scores.",,FD,"631 Raw Material Shift Time Machine A Machine B Machine C
+0     Material 1    Morning        85        88        87
+1     Material 1    Evening        84        86        85
+2     Material 2    Morning        86        89        88
+3     Material 2    Evening        85        87        86
+4     Material 3    Morning        87        90        89
+5     Material 3    Evening        86        88        87
+6     Material 4    Morning        88        91        90
+7     Material 4    Evening        87        89        88",False,True,True,True,True,"[['Morning' 85.0 88.0 87.0]
+ ['Evening' 84.0 86.0 85.0]
+ ['Morning' 86.0 89.0 88.0]
+ ['Evening' 85.0 87.0 86.0]
+ ['Morning' 87.0 90.0 89.0]
+ ['Evening' 86.0 88.0 87.0]
+ ['Morning' 88.0 91.0 90.0]
+ ['Evening' 87.0 89.0 88.0]]"
+"A researcher is studying the yield of four different crop varieties under three types of fertilizers and two irrigation methods. The data collected (yield in kg) is as follows:
+Investigate the effect of crop variety fertilizer type and irrigation method on yield.",,FD,"641 Crop Variety Fertilizer Irrigation Yield
+0      Variety 1     Type A       Drip   150
+1      Variety 1     Type A      Flood   145
+2      Variety 1     Type B       Drip   152
+3      Variety 1     Type B      Flood   148
+4      Variety 1     Type C       Drip   155
+5      Variety 1     Type C      Flood   150
+6      Variety 2     Type A       Drip   160
+7      Variety 2     Type A      Flood   155
+8      Variety 2     Type B       Drip   162
+9      Variety 2     Type B      Flood   158
+10     Variety 2     Type C       Drip   165
+11     Variety 2     Type C      Flood   160
+12     Variety 3     Type A       Drip   170
+13     Variety 3     Type A      Flood   165
+14     Variety 3     Type B       Drip   172
+15     Variety 3     Type B      Flood   168
+16     Variety 3     Type C       Drip   175
+17     Variety 3     Type C      Flood   170
+18     Variety 4     Type A       Drip   180
+19     Variety 4     Type A      Flood   175
+20     Variety 4     Type B       Drip   182
+21     Variety 4     Type B      Flood   178
+22     Variety 4     Type C       Drip   185
+23     Variety 4     Type C      Flood   180",False,True,True,True,True,"[['Type A' 'Flood' 145.0]
+ ['Type B' 'Drip' 152.0]
+ ['Type B' 'Flood' 148.0]
+ ['Type C' 'Drip' 155.0]
+ ['Type C' 'Flood' 150.0]
+ ['Type A' 'Drip' 160.0]
+ ['Type A' 'Flood' 155.0]
+ ['Type B' 'Drip' 162.0]
+ ['Type B' 'Flood' 158.0]
+ ['Type C' 'Drip' 165.0]
+ ['Type C' 'Flood' 160.0]
+ ['Type A' 'Drip' 170.0]
+ ['Type A' 'Flood' 165.0]
+ ['Type B' 'Drip' 172.0]
+ ['Type B' 'Flood' 168.0]
+ ['Type C' 'Drip' 175.0]
+ ['Type C' 'Flood' 170.0]
+ ['Type A' 'Drip' 180.0]
+ ['Type A' 'Flood' 175.0]
+ ['Type B' 'Drip' 182.0]
+ ['Type B' 'Flood' 178.0]
+ ['Type C' 'Drip' 185.0]
+ ['Type C' 'Flood' 180.0]]"
+"A pharmaceutical company is testing three medications on four types of patients (based on age) at three different dosage levels. The effectiveness scores (out of 10) are as follows:
+Determine the effect of patient type dosage level and medication on effectiveness scores.",,FD,"667 Patient Type Dosage Level Medication A Medication B Medication C
+0         Type 1          Low          7.5            8          7.8
+1         Type 1       Medium            8          8.5          8.3
+2         Type 1         High          8.2          8.7          8.5
+3         Type 2          Low          7.3          7.8          7.6
+4         Type 2       Medium          7.8          8.3          8.1
+5         Type 2         High            8          8.5          8.3
+6         Type 3          Low          7.6          8.1          7.9
+7         Type 3       Medium          8.1          8.6          8.4
+8         Type 3         High          8.3          8.8          8.6
+9         Type 4          Low          7.4          7.9          7.7
+10        Type 4       Medium          7.9          8.4          8.2
+11        Type 4         High          8.1          8.6          8.4",False,True,True,True,True,"[['Low' 7.5 8.0 7.8]
+ ['Medium' 8.0 8.5 8.3]
+ ['High' 8.2 8.7 8.5]
+ ['Low' 7.3 7.8 7.6]
+ ['Medium' 7.8 8.3 8.1]
+ ['High' 8.0 8.5 8.3]
+ ['Low' 7.6 8.1 7.9]
+ ['Medium' 8.1 8.6 8.4]
+ ['High' 8.3 8.8 8.6]
+ ['Low' 7.4 7.9 7.7]
+ ['Medium' 7.9 8.4 8.2]
+ ['High' 8.1 8.6 8.4]]"
+"A retail chain is evaluating customer satisfaction across four store locations three service strategies and two time periods. The satisfaction scores (out of 10) are as follows:
+Analyze the impact of store location time period and service strategy on customer satisfaction.",,FD,"681 Store Location Time Period Strategy A Strategy B Strategy C
+0          Store 1     Morning        7.5          8        7.8
+1          Store 1     Evening        7.4        7.9        7.7
+2          Store 2     Morning          8        8.5        8.3
+3          Store 2     Evening        7.9        8.4        8.2
+4          Store 3     Morning        7.8        8.3        8.1
+5          Store 3     Evening        7.7        8.2          8
+6          Store 4     Morning        7.6        8.1        7.9
+7          Store 4     Evening        7.5          8        7.8",False,True,True,True,True,"[['Morning' 7.5 8.0 7.8]
+ ['Evening' 7.4 7.9 7.7]
+ ['Morning' 8.0 8.5 8.3]
+ ['Evening' 7.9 8.4 8.2]
+ ['Morning' 7.8 8.3 8.1]
+ ['Evening' 7.7 8.2 8.0]
+ ['Morning' 7.6 8.1 7.9]
+ ['Evening' 7.5 8.0 7.8]]"
+"A company is testing the effectiveness of four training programs across three departments and two experience levels of employees. The performance scores are as follows:
+Investigate the effect of department experience level and training program on performance scores.",,FD,"691 Department Experience Level Program A Program B Program C Program D
+0           HR           Junior        75        78        76        77
+1           HR           Senior        78        81        79        80
+2           IT           Junior        80        83        81        82
+3           IT           Senior        83        86        84        85
+4        Sales           Junior        78        81        79        80
+5        Sales           Senior        81        84        82        83",False,True,True,True,True,"[['Junior' 75.0 78.0 76.0 77.0]
+ ['Senior' 78.0 81.0 79.0 80.0]
+ ['Junior' 80.0 83.0 81.0 82.0]
+ ['Senior' 83.0 86.0 84.0 85.0]
+ ['Junior' 78.0 81.0 79.0 80.0]
+ ['Senior' 81.0 84.0 82.0 83.0]]"
+"A nutritionist is testing four diet programs on weight loss across three age groups and two genders. The data collected (weight loss in kg) is as follows:
+Examine the effect of age group gender and diet program on weight loss.",,FD,"699 Age Group  Gender Program A Program B Program C Program D
+0       20-30    Male       3.5         4       3.8       3.9
+1       20-30  Female       3.7       4.2         4       4.1
+2       31-40    Male       3.6       4.1       3.9         4
+3       31-40  Female       3.8       4.3       4.1       4.2
+4       41-50    Male       3.4       3.9       3.7       3.8
+5       41-50  Female       3.6       4.1       3.9         4",False,True,True,True,True,"[['Male' 3.5 4.0 3.8 3.9]
+ ['Female' 3.7 4.2 4.0 4.1]
+ ['Male' 3.6 4.1 3.9 4.0]
+ ['Female' 3.8 4.3 4.1 4.2]
+ ['Male' 3.4 3.9 3.7 3.8]
+ ['Female' 3.6 4.1 3.9 4.0]]"
+"An education researcher is evaluating the effectiveness of four teaching methods across three grade levels and two types of schools. The performance scores are as follows:
+Determine the effect of grade level school type and teaching method on performance scores.",,FD,"707 Grade Level School Type Method A Method B Method C Method D
+0       Grade 1      Public       85       88       87       86
+1       Grade 1     Private       88       91       90       89
+2       Grade 2      Public       84       87       86       85
+3       Grade 2     Private       87       90       89       88
+4       Grade 3      Public       83       86       85       84
+5       Grade 3     Private       86       89       88       87",False,True,True,True,True,"[['Public' 85.0 88.0 87.0 86.0]
+ ['Private' 88.0 91.0 90.0 89.0]
+ ['Public' 84.0 87.0 86.0 85.0]
+ ['Private' 87.0 90.0 89.0 88.0]
+ ['Public' 83.0 86.0 85.0 84.0]
+ ['Private' 86.0 89.0 88.0 87.0]]"
+"A software company is testing the usability of four software versions across three user demographics and two usage environments. The usability scores (out of 10) are as follows:
+Analyze the impact of user demographic usage environment and software version on usability scores.",,FD,"715 User Demographic Usage Environment Version A Version B Version C Version D
+0              18-25            Office       7.5         8       7.8       7.9
+1              18-25              Home       7.4       7.9       7.7       7.8
+2              26-35            Office         8       8.5       8.3       8.4
+3              26-35              Home       7.9       8.4       8.2       8.3
+4              36-45            Office       7.8       8.3       8.1       8.2
+5              36-45              Home       7.7       8.2         8       8.1",False,True,True,True,True,"[['Office' 7.5 8.0 7.8 7.9]
+ ['Home' 7.4 7.9 7.7 7.8]
+ ['Office' 8.0 8.5 8.3 8.4]
+ ['Home' 7.9 8.4 8.2 8.3]
+ ['Office' 7.8 8.3 8.1 8.2]
+ ['Home' 7.7 8.2 8.0 8.1]]"
+"A company is testing four advertising campaigns on brand awareness across three regions and two media types. The awareness scores (out of 10) are as follows:
+Investigate the effect of region media type and advertising campaign on brand awareness.",,FD,"723 Region Media Type Campaign A Campaign B Campaign C Campaign D
+0    North     Online        7.5          8        7.8        7.9
+1    North         TV        7.4        7.9        7.7        7.8
+2    South     Online          8        8.5        8.3        8.4
+3    South         TV        7.9        8.4        8.2        8.3
+4     East     Online        7.8        8.3        8.1        8.2
+5     East         TV        7.7        8.2          8        8.1",False,True,True,True,True,"[['Online' 7.5 8.0 7.8 7.9]
+ ['TV' 7.4 7.9 7.7 7.8]
+ ['Online' 8.0 8.5 8.3 8.4]
+ ['TV' 7.9 8.4 8.2 8.3]
+ ['Online' 7.8 8.3 8.1 8.2]
+ ['TV' 7.7 8.2 8.0 8.1]]"
+"A gym is testing four exercise routines on muscle gain across three age groups and two genders. The data collected (muscle gain in kg) is as follows:
+Examine the effect of age group gender and exercise routine on muscle gain.",,FD,"731 Age Group  Gender Routine A Routine B Routine C Routine D
+0       20-30    Male       2.5         3       2.8       2.9
+1       20-30  Female       2.7       3.2         3       3.1
+2       31-40    Male       2.6       3.1       2.9         3
+3       31-40  Female       2.8       3.3       3.1       3.2
+4       41-50    Male       2.4       2.9       2.7       2.8
+5       41-50  Female       2.6       3.1       2.9         3",False,True,True,True,True,"[['Male' 2.5 3.0 2.8 2.9]
+ ['Female' 2.7 3.2 3.0 3.1]
+ ['Male' 2.6 3.1 2.9 3.0]
+ ['Female' 2.8 3.3 3.1 3.2]
+ ['Male' 2.4 2.9 2.7 2.8]
+ ['Female' 2.6 3.1 2.9 3.0]]"
+"An energy company is testing the efficiency of four energy-saving devices across three building types and two usage patterns. The consumption data (in kWh) is as follows:
+Determine the effect of building type usage pattern and energy-saving device on energy consumption.",,FD,"739 Building Type Usage Pattern Device A Device B Device C Device D
+0          Type 1     Pattern 1      150      160      155      157
+1          Type 1     Pattern 2      145      158      152      154
+2          Type 2     Pattern 1      148      162      153      155
+3          Type 2     Pattern 2      151      159      154      156
+4          Type 3     Pattern 1      152      164      156      158
+5          Type 3     Pattern 2      149      161      155      157",False,True,True,True,False,"[['Pattern 1' 150.0 160.0 155.0 157.0]
+ ['Pattern 2' 145.0 158.0 152.0 154.0]
+ ['Pattern 1' 148.0 162.0 153.0 155.0]
+ ['Pattern 2' 151.0 159.0 154.0 156.0]
+ ['Pattern 1' 152.0 164.0 156.0 158.0]
+ ['Pattern 2' 149.0 161.0 155.0 157.0]]"
+"A manufacturing company is testing the quality of four products across three production lines and two inspection times. The quality scores (out of 10) are as follows:
+Investigate the effect of production line inspection time and product type on quality scores.",,FD,"747 Production Line Inspection Time Product A Product B Product C Product D
+0            Line 1         Morning       8.5       8.8       8.7       8.6
+1            Line 1         Evening       8.4       8.7       8.6       8.5
+2            Line 2         Morning       8.6       8.9       8.8       8.7
+3            Line 2         Evening       8.5       8.8       8.7       8.6
+4            Line 3         Morning       8.7         9       8.9       8.8
+5            Line 3         Evening       8.6       8.9       8.8       8.7",False,True,True,True,True,"[['Morning' 8.5 8.8 8.7 8.6]
+ ['Evening' 8.4 8.7 8.6 8.5]
+ ['Morning' 8.6 8.9 8.8 8.7]
+ ['Evening' 8.5 8.8 8.7 8.6]
+ ['Morning' 8.7 9.0 8.9 8.8]
+ ['Evening' 8.6 8.9 8.8 8.7]]"
+"A retail company is testing the effectiveness of four sales strategies across three regions and two sales periods. The performance scores (out of 10) are as follows:
+Analyze the impact of region sales period and sales strategy on performance scores.",,FD,"755 Region Sales Period Strategy A Strategy B Strategy C Strategy D
+0    North           Q1         75         78         77         76
+1    North           Q2         74         77         76         75
+2    South           Q1         78         81         80         79
+3    South           Q2         77         80         79         78
+4     East           Q1         76         79         78         77
+5     East           Q2         75         78         77         76",False,True,True,True,False,"[['Q1' 75.0 78.0 77.0 76.0]
+ ['Q2' 74.0 77.0 76.0 75.0]
+ ['Q1' 78.0 81.0 80.0 79.0]
+ ['Q2' 77.0 80.0 79.0 78.0]
+ ['Q1' 76.0 79.0 78.0 77.0]
+ ['Q2' 75.0 78.0 77.0 76.0]]"
+"A tech company is testing the performance of four website designs across three user groups and two browsing devices. The performance scores (out of 10) are as follows:
+Determine the effect of user group device and website design on performance scores.",,FD,"763 User Group   Device Design A Design B Design C Design D
+0      Group 1  Desktop      8.5      8.8      8.7      8.6
+1      Group 1   Mobile      8.4      8.7      8.6      8.5
+2      Group 2  Desktop      8.6      8.9      8.8      8.7
+3      Group 2   Mobile      8.5      8.8      8.7      8.6
+4      Group 3  Desktop      8.7        9      8.9      8.8
+5      Group 3   Mobile      8.6      8.9      8.8      8.7",False,True,True,True,True,"[['Desktop' 8.5 8.8 8.7 8.6]
+ ['Mobile' 8.4 8.7 8.6 8.5]
+ ['Desktop' 8.6 8.9 8.8 8.7]
+ ['Mobile' 8.5 8.8 8.7 8.6]
+ ['Desktop' 8.7 9.0 8.9 8.8]
+ ['Mobile' 8.6 8.9 8.8 8.7]]"
+"A company is testing the effectiveness of four marketing campaigns across three customer segments and two advertising channels. The effectiveness scores (out of 10) are as follows:
+Investigate the effect of customer segment advertising channel and marketing campaign on effectiveness scores.",,FD,"771 Customer Segment  Channel Campaign A Campaign B Campaign C Campaign D
+0          Segment 1   Online        7.5          8        7.8        7.9
+1          Segment 1  Offline        7.4        7.9        7.7        7.8
+2          Segment 2   Online          8        8.5        8.3        8.4
+3          Segment 2  Offline        7.9        8.4        8.2        8.3
+4          Segment 3   Online        7.8        8.3        8.1        8.2
+5          Segment 3  Offline        7.7        8.2          8        8.1",False,True,True,True,True,"[['Online' 7.5 8.0 7.8 7.9]
+ ['Offline' 7.4 7.9 7.7 7.8]
+ ['Online' 8.0 8.5 8.3 8.4]
+ ['Offline' 7.9 8.4 8.2 8.3]
+ ['Online' 7.8 8.3 8.1 8.2]
+ ['Offline' 7.7 8.2 8.0 8.1]]"
+"A botanist is studying the effect of three different fertilizers on the growth of plants. The plant heights (in cm) after 4 weeks are recorded for each fertilizer type as follows:
+Analyze the impact of the different fertilizers on plant growth.",,RBD,"779 Fertilizer Type Plant 1 Plant 2 Plant 3 Plant 4 Plant 5
+0      Fertilizer A    12.3    11.8    12.7      12    11.9
+1      Fertilizer B    13.4      13    13.2    12.9    13.1
+2      Fertilizer C    14.5    14.2    14.3    14.1    14.4",False,False,True,False,False,"[[12.3 11.8 12.7 12.0 11.9]
+ [13.4 13.0 13.2 12.9 13.1]
+ [14.5 14.2 14.3 14.1 14.4]]"
+"A pharmaceutical company is testing the effectiveness of three different drugs on reducing blood pressure. The reductions (in mmHg) are recorded for a sample of patients for each drug as follows:
+Determine the effect of each drug on reducing blood pressure.",,RBD,"784 Drug Type Patient 1 Patient 2 Patient 3 Patient 4 Patient 5
+0      Drug A        10        12        11        13        12
+1      Drug B        14        16        15        14        15
+2      Drug C        18        20        19        21        20",False,False,True,False,False,"[[10.0 12.0 11.0 13.0 12.0]
+ [14.0 16.0 15.0 14.0 15.0]
+ [18.0 20.0 19.0 21.0 20.0]]"
+"An educational researcher is comparing the effectiveness of three teaching methods on student test scores. The test scores for each method are recorded as follows:
+Examine the impact of different teaching methods on student performance.",,RBD,"789 Teaching Method Student 1 Student 2 Student 3 Student 4 Student 5
+0          Method A        78        82        80        79        81
+1          Method B        85        88        87        86        87
+2          Method C        90        92        91        93        92",False,False,True,False,False,"[[78.0 82.0 80.0 79.0 81.0]
+ [85.0 88.0 87.0 86.0 87.0]
+ [90.0 92.0 91.0 93.0 92.0]]"
+"A manufacturing company is evaluating the efficiency of three different machines in producing widgets. The number of widgets produced per hour by each machine is recorded as follows:
+Analyze the efficiency of the different machines.",,RBD,"794 Machine Type Hour 1 Hour 2 Hour 3 Hour 4 Hour 5
+0      Machine A     45     47     46     48     47
+1      Machine B     50     52     51     53     52",False,False,True,False,False,"[[45.0 47.0 46.0 48.0 47.0]
+ [50.0 52.0 51.0 53.0 52.0]]"
