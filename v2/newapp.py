@@ -1,5 +1,5 @@
 import streamlit as st
-from anova_steps import anova_steps_cbd, anova_steps_rbd
+from anova_steps import anova_steps_cbd, anova_steps_rbd, anova_steps_fd
 import pandas as pd
 import cv2
 import pytesseract
@@ -171,21 +171,27 @@ if uploaded_file is not None:
     
     a = predict_alpha_value(question)[0]
     st.write("α = ", a)
-    st.write("Columns: ", len(data.columns))
-    st.write("Distinct Elements: ", distinct_elements(data))
-    st.write("Nested: ", isNested(data))
     type = predict_type(len(data.columns), distinct_elements(data), isNested(data))
+    type = 'FD'
     
     if type == 'CRD':
         mean, total_mean, SSC, df_c, SSE, df_e, SST, df_t, MSC, MSE, F, F_critical = anova_steps_cbd(data, a)
+        st.write("Mean: ", mean)
+        st.write("Total Mean: ", total_mean)
     if type == 'RBD':
         #drop 1st row
         data = data.tail(-1)
         #drop 1st and 2nd columns coz in data we have row names and BLOCKING written
         data = data.drop(columns=[data.columns[0], data.columns[1]])
         mean, total_mean, SSC, df_c, SSR, df_r, SSE, df_e, SST, df_t, MSC, MSR, MSE, F_treat, F_block, F_critical_treat, F_critical_block = anova_steps_rbd(data, a)
-    st.write("Mean: ", mean)
-    st.write("Total Mean: ", total_mean)
+        st.write("Mean: ", mean)
+        st.write("Total Mean: ", total_mean)
+    if type == 'FD':
+        # Clean data
+        n = 4
+        row_treat = 2
+        SST, df_t, SSC, df_c, SSR, df_r, SSI, df_i, SSE, df_e, MSR, MSC, MSI, MSE, F_r, F_c, F_i, F_critical_row, F_critical_col, F_critical_iter = anova_steps_fd(data, a, n, row_treat)
+    
     st.write("Data: ", data)
     if type == 'CRD':
         table_data = {
@@ -203,6 +209,15 @@ if uploaded_file is not None:
             "F": [F_treat, F_block, '', '']
         }
         table_index = ["Treatments", "Blocks", "Error", "Total"]
+        
+    if type == 'FD':
+        table_data = {
+            "SS": [SSR, SSC, SSI, SSE, SST],
+            "df": [df_r, df_c, df_i, df_e, df_t],
+            "MS": [MSR, MSC, MSI, MSE, ''],
+            "F": [F_critical_row, F_critical_col, F_critical_iter, '', '']
+        }
+        table_index = ["Rows", "Columns", "Iters", "Error", "Total"]
     
     table_df = pd.DataFrame(table_data, index=table_index)
     st.table(table_df)
@@ -223,3 +238,19 @@ if uploaded_file is not None:
             st.write("Reject Null Hypothesis for Blocks")
         else:
             st.write("Accept Null Hypothesis for Blocks")
+    if type == 'FD':
+        st.write("F Critical (Rows): ", F_critical_row, " alpha = ", a)
+        st.write("F Critical (Columns): ", F_critical_col, " alpha = ", a)
+        st.write("F Critical (Iters): ", F_critical_iter, " alpha = ", a)
+        if F_r > F_critical_row:
+            st.write("Reject Null Hypothesis for Rows")
+        else:
+            st.write("Accept Null Hypothesis for Rows")
+        if F_c > F_critical_col:
+            st.write("Reject Null Hypothesis for Columns")
+        else:
+            st.write("Accept Null Hypothesis for Columns")
+        if F_i > F_critical_iter:
+            st.write("Reject Null Hypothesis for Iters")
+        else:
+            st.write("Accept Null Hypothesis for Iters")
